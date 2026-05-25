@@ -125,69 +125,54 @@
     padding: 8rem 3rem;
   }
 
-  .contact-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: center;
-  }
+  .contact-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  margin-top: 4rem;
+  flex-wrap: nowrap;
+}
 
-  .contact-left h2 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 3.2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
+.contact-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.8rem 2rem;
+  min-width: 260px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
 
-  .contact-left .subtitle {
-    color: #6c63ff;
-    font-size: 0.95rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-  }
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
 
-  .contact-info {
-    margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
+.contact-card-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
 
-  .info-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-  }
+.contact-card-label {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
 
-  .info-icon {
-    font-size: 1.4rem;
-    width: 40px;
-  }
+.contact-card-value {
+  font-size: 1rem;
+  line-height: 1.6;
+  word-break: break-word;
+}
 
-  .info-content h4 {
-    font-size: 1rem;
-    color: var(--muted);
-    margin-bottom: 4px;
+@media (max-width: 900px) {
+  .contact-cards {
+    flex-wrap: wrap;
   }
-
-  .info-content a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-  }
-
-  .info-content a:hover {
-    color: var(--accent2);
-  }
-
-  .contact-right {
-    color: var(--muted);
-    font-size: 1.15rem;
-    line-height: 1.8;
-  }
+}
 
   /* Other sections styles (kept clean) */
   section { padding: 6rem 3rem; }
@@ -586,7 +571,7 @@
       <a href="mailto:karthikeyansbecse@gmail.com" class="contact-card">
         <div class="contact-card-icon">📧</div>
         <div class="contact-card-label">Email</div>
-        <div class="contact-card-value">karthikeyansbecse<br>@gmail.com</div>
+        <div class="contact-card-value">karthikeyansbecse@gmail.com</div>
       </a>
       <a href="tel:+918838919808" class="contact-card">
         <div class="contact-card-icon">📱</div>
@@ -596,7 +581,7 @@
       <div class="contact-card">
         <div class="contact-card-icon">📍</div>
         <div class="contact-card-label">Location</div>
-        <div class="contact-card-value">Dharmapuri,<br>Tamil Nadu</div>
+        <div class="contact-card-value">Dharmapuri, Tamil Nadu</div>
       </div>
     </div>
   </div>
